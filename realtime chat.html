@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat Support</title>
+  <link rel="stylesheet" href="chat.css" />
+</head>
+<body>
+  <div class="chat-wrapper">
+    <header class="chat-header">
+      <div class="avatar">
+        A
+        <span class="status-dot"></span>
+      </div>
+      <div class="header-info">
+        <h3>Ayesha's personal chat</h3>
+        <!-- Added id="status-text" -->
+        <p id="status-text">Online</p>
+      </div>
+
+      <!-- Added clear button -->
+      <button type="button" id="clear-btn" class="clear-btn" title="Clear Chat">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+          <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+        </svg>
+      </button>
+    </header>
+
+    <main id="chat-box" class="chat-box">
+      <!-- Added id="typing-indicator" element expected by JS -->
+      <div id="typing-indicator" class="typing-indicator hidden">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </main>
+
+    <form id="chat-form" class="chat-input-container">
+      <input
+        type="text"
+        id="message-input"
+        placeholder="Type a message..."
+        autocomplete="off"
+      />
+      <button type="submit" id="send-btn">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+        </svg>
+      </button>
+    </form>
+  </div>
+
+  <script src="chat.js"></script>
+</body>
+</html>
